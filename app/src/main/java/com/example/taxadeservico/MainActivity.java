@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
         //Formata a porcentagem e exibe no componente
         porcentagemTextView.setText(porcentagemFormatada.format(percent));
 
-        // Calcula a gorjeta e o total
+        // Calcula a gorjeta e o total da aplicação
         double tx = valorConta * percent;
         double total = valorConta + tx;
 
