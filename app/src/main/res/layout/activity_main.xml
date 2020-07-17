@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/valorEditText"
+        android:layout_width="299dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="16dp"
+        android:digits="0123456789"
+        android:ems="10"
+        android:inputType="none|numberDecimal"
+        android:maxLength="6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/valorTextView"
+        android:layout_width="299dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="52dp"
+        android:background="@color/valor_background"
+        android:hint="@string/textoValor"
+        android:padding="@dimen/textview_padding"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <SeekBar
+        android:id="@+id/percentSeekBar"
+        android:layout_width="248dp"
+        android:layout_height="@dimen/seekbar_height"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="56dp"
+        android:max="100"
+        android:progress="15"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/percentTextView"
+        app:layout_constraintTop_toBottomOf="@+id/valorEditText" />
+
+    <TextView
+        android:id="@+id/percentTextView"
+        android:layout_width="38dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="28dp"
+        android:text="15%"
+        app:layout_constraintBottom_toTopOf="@+id/GorjetaLBLTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/valorEditText"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/GorjetaLBLTextView"
+        android:layout_width="55dp"
+        android:layout_height="21dp"
+        android:layout_marginTop="204dp"
+        android:text="@string/lblGorjeta"
+        app:layout_constraintEnd_toStartOf="@+id/GorjetaTextView"
+        app:layout_constraintHorizontal_bias="0.557"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/TotalTextView"
+        android:layout_width="218dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="68dp"
+        android:background="@color/result_background"
+        android:padding="@dimen/textview_padding"
+        android:text="R$ 0,00"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/GorjetaTextView" />
+
+    <TextView
+        android:id="@+id/GorjetaTextView"
+        android:layout_width="218dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="68dp"
+        android:background="@color/result_background"
+        android:padding="@dimen/textview_padding"
+        android:text="R$ 0,00"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/percentSeekBar" />
+
+    <TextView
+        android:id="@+id/TotalLBLTextView"
+        android:layout_width="40dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="52dp"
+        android:text="@string/lblTotal"
+        app:layout_constraintEnd_toStartOf="@+id/TotalTextView"
+        app:layout_constraintHorizontal_bias="0.458"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/GorjetaLBLTextView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
